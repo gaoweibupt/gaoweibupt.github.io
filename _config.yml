@@ -70,7 +70,7 @@ ba_track_id: b47620c2777ea47b805e8c248fca2be1
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "认真写代码，淡定学技术，<br>过最好的人生，为未来的自己"
+sidebar-about-description: "认真写代码，淡定学技术，<br>为未来的自己, 过最好的人生"
 sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 

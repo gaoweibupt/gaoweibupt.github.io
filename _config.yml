@@ -90,7 +90,7 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "Galway",
-        href: "http://gaoweibupt.github.io"
+        title: "Happen",
+        href: "http://vonalex.github.io/"
     },
 ]

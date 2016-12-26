@@ -42,7 +42,7 @@ file->Other Settings->Default Setting中，将maven的home directory设置成下
         <!--<url>http://mvnrepository.com/</url>-->
     </mirror>
   </mirrors>
-``` 
+```
 
 ### archetype创建工程 
 
@@ -52,7 +52,8 @@ maven使用archetype创建工程时，可以根据不同的archetype生成工程
 
 创建成功后，idea的maven会自动生成文件目录，或者自己手动在终端中执行`mvn generate`
 
-由于maven初次使用，可能工程的plugin 依赖有问题，因此在pom中添加了如下内容，解决了不能成功`mvn install`的问题
+__另外__，由于maven初次使用，可能工程的plugin 依赖有问题，因此在pom中添加了如下内容，解决了不能成功`mvn install`的问题
+
 ```
   <build>
     <plugins>

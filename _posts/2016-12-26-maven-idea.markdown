@@ -5,6 +5,7 @@ subtitle:   "maven使用详解"
 date:       2016-12-26 12:00:00
 author:     "galway"
 header-img: "img/home-bg-o.jpg"
+catalog:  ture
 tags:
     - engineering
     - maven

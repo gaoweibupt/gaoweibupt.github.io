@@ -6,7 +6,8 @@ date:       2016-12-26 12:00:00
 author:     "galway"
 header-img: "img/home-bg-o.jpg"
 tags:
-    - Life
+    - engineering
+    - maven
 ---
 
 昨天在idea客户端下使用maven新建工程，遇到了许多问题，所以纪录一下详细的过程。

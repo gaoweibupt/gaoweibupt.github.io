@@ -69,12 +69,12 @@ mongo采用预分配空间的机制，始终保持额外的空间和空余的数
 
 #### 1.插入
 
->  ```
->  > db.request_entity.insert({"code":123, "url":"www.baidu.com", "update_time":new Date()});
->  > db.request_entity.find();
->   { "_id" : ObjectId("58747e8d0bbf2f8da758aa6e"), "code" : 123, "url" : "www.baidu.com", "update_time" : ISODate("2017-01-10T06:26:21.039Z") }
->  //request_entity 为collection, 在第一次插入时会默认创建, 默认存储的数据库为test
->  ```  
+> ```
+> > db.request_entity.insert({"code":123, "url":"www.baidu.com", "update_time":new Date()});
+> > db.request_entity.find();
+> { "_id" : ObjectId("58747e8d0bbf2f8da758aa6e"), "code" : 123, "url" : "www.baidu.com", "update_time" : ISODate("2017-01-10T06:26:21.039Z") }
+> //request_entity 为collection, 在第一次插入时会默认创建, 默认存储的数据库为test
+> ```  
 
 _注意_：插入数据会自动生成一个主键_id, 类型为ObjectId。 MongoDB不支持原生的自增组件
  

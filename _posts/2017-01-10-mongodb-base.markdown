@@ -184,8 +184,9 @@ explain()可以获知系统如何处理查询请求，观察系统如何利用�
 3. cd /home/work/.jumbo/opt/mongodb/
 4. mkdir data   mkdir log
 5. export LC_ALL=C
-6. 启动服务  ./bin/mongod --dbpath=/home/work/.jumbo/opt/mongodb/data
+6. 启动服务  ./bin/mongod --dbpath=/home/work/.jumbo/opt/mongodb/data --logpath=/home/work/.jumbo/opt/mongo/log/mongodb.log
 7. shell交互页面  ./bin/mongo   默认端口号27017
+
  
 #### 本地
 

@@ -1,41 +1,41 @@
 ---
 lyout:      post
-title:      "�������"
-subtitle:   "�������"
+title:      "面向对象"
+subtitle:   "面向对象"
 date:       2017-04-23 10:58:00
 author:     "galway"
 header-img: "img/home-bg-o.jpg"
 catalog:  ture
 tags:
-    - �������
-    - �������
+    - 面向对象
+    - 程序设计
 ---
 
 
-## ���ԭ��SOLID
+## 设计原则SOLID
 
-* SRP����һְ��ԭ��The Single Responsibility Principle��
-* OCP�����ŷ��ԭ��The Open Closed Principle��
-* LSP�������滻ԭ��The Liskov Substitution Principle��
-* ISP���ӿڷ���ԭ��The Interface Segregation Principle��
-* DIP����������ԭ��The Dependency Inversion Principle��
+* SRP：单一职责原则（The Single Responsibility Principle）
+* OCP：开放封闭原则（The Open Closed Principle）
+* LSP：里氏替换原则（The Liskov Substitution Principle）
+* ISP：接口分离原则（The Interface Segregation Principle）
+* DIP：依赖倒置原则（The Dependency Inversion Principle）
 
-#### ��һְ��ԭ��
-һ����򷽷�ֻ�е�һ��ְ��
-���ģʽ�� װ�������ģʽ��������ģʽ������ģʽ
+#### 单一职责原则
+一个类或方法只承担一种职责
+设计模式： 装饰者设计模式；责任链模式；命令模式
 
-#### ���ŷ��ԭ��
-����չ�ǿ��ŵģ����޸��Ƿ�յġ�
-ͨ�����Ӵ�������չ���ܣ��������޸��Ѿ����ڵĴ���
-���ģʽ��ģ�巽��ģʽ������ģʽ
+#### 开放封闭原则
+对扩展是开放的，对修改是封闭的。
+通过增加代码来扩展功能，而不是修改已经存在的代码
+设计模式：模板方法模式；策略模式
 
-#### �����滻ԭ��
-���������չ����Ĺ��ܣ����ǲ��ܸı�ԭ�й��ܣ����ӿڻ�����ֵĵط���ʵ�ֽӿڵ����������Դ���
+#### 里氏替换原则
+子类可以扩展父类的功能，但是不能改变原有功能；即接口或父类出现的地方，实现接口的类或子类可以代入
 
 
-#### �ӿڷ���ԭ��
-�ͻ��˲�Ӧ��������Ľӿڣ�Ӧ�òü�ΪС�Ľӿڸ��ͻ�ģ��ʹ�ã��Լ��������ԣ��������
+#### 接口分离原则
+客户端不应该依赖大的接口，应该裁剪为小的接口给客户模块使用，以减少依赖性，降低耦合
 
-#### ��������ԭ��
-�߲�ģ�鲻�����ڵͲ�ģ�飬���߶�Ӧ�������ڳ���
-����Ӧ��������ϸ�ڣ�ϸ��Ӧ�������ڳ���
+#### 依赖倒置原则
+高层模块不依赖于低层模块，二者都应该依赖于抽象
+抽象不应该依赖于细节，细节应该依赖于抽象

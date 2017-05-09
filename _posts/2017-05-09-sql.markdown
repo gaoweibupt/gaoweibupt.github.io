@@ -1,7 +1,7 @@
 ---
 lyout:      post
-title:      "SQL查询问题"
-subtitle:   "SQL查询问题"
+title:      "SQL查询问题优化"
+subtitle:   "SQL查询问题优化"
 date:       2017-05-09 16:47:00
 author:     "galway"
 header-img: "img/home-bg-o.jpg"

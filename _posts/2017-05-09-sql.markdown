@@ -97,9 +97,15 @@ tags:
 还可以在sql后面使用limit，进行分页统计，减少程序占用的内存
 
 #### left join
-LEFT JOIN 关键字会从左表 t1 那里返回所有的行，即使在右表 t2 中没有匹配的行, t2没有匹配的行时。
 
+* left join(左联接) 返回包括左表中的所有记录和右表中联结字段相等的记录 
+* right join(右联接) 返回包括右表中的所有记录和左表中联结字段相等的记录
+* inner join(等值连接) 只返回两个表中联结字段相等的行
 
+多表关联占用的临时表空间比较大
+A left join B on XX where XX
+where 子句会在left join获得结果之后才执行，所以尽可能地把条件放在on，减少where的执行
+使用join时，尽量避免复杂的子查询
 
 ### 第三次优化
 在实际使用中，上述优化取得了正确的结果，但是分页执行速度非常慢，每页数据量大时又会超出内存限制。
@@ -117,10 +123,23 @@ distinct 和 group 时间占用太大，所以把 distinct 和 group by 去掉�
 
 将distinct max group by操作完全放到代码里面，通过对分页查询到的数据进行统计，时间上确实更快了
 
+#### distinct 和 group by
+group by 都比 distinct 性能要高，所以可以使用group by代替distinct时尽量使用
+group by的字段最好加索引
+exists 替换 distinct 可以提高效率
+
+#### exists
+exists 查询到存在的纪录就会停止
+不要使用not exists,不存在的判断是需要扫描全表的
+
+#### limit
+limit 要配合order by 使用，否则查询到的结果不准确
 
 ### 下一步优化
 将sql中的where exists 去掉，使用where XXX in (常量) 可以更快地提升速度
 
+#### where in
+where in 采用or进行比较，
 
 
 

@@ -1,7 +1,7 @@
 ---
 lyout:      post
-title:      "redis实现锁"
-subtitle:   "redus实现锁"
+title:      "redis实现锁机制"
+subtitle:   "redus实现锁机制"
 date:       2017-12-10 10:58:00
 author:     "galway"
 header-img: "img/home-bg-o.jpg"
@@ -12,16 +12,16 @@ tags:
 ---
 
 
-## redis 常用锁命令
+## 1.redis 常用锁命令
 
 * SETNX
 set if not exists,缓存不存在时设置
 * INCR
 键值+1,键不存在操作之前会先设置0
 
-## 锁实现的方法
+## 2.锁实现的方法
 
-### SETNX
+### 2.1 SETNX
 
 锁实现的思路：
 
@@ -68,7 +68,7 @@ set if not exists,缓存不存在时设置
     }
 ```
 
-### INCR
+### 2.2 INCR
 锁实现的思路：
 
 ```
@@ -79,9 +79,9 @@ set if not exists,缓存不存在时设置
 5.客户端B执行完删除锁
 ```
 
-### SET
+### 2.3 SET
 使用SETNX和INCR也需要设置过期时间,这样就不是原子操作了,就可能存在expire失败导致锁不能释放的情况。解决办法一种是利用SETNX的示例代码中,其他进程读取到锁没有设置过期时间就加上过期时间。另外一种方法就是利用SET命令,直接加上过期时间
 
-### 相关文档
+## 3.相关文档
 
 [官方提供的redis分布式锁文档](https://redis.io/topics/distlock)
